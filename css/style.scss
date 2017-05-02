@@ -1,0 +1,161 @@
+$nav-height: 7.5rem;
+$nav-height-full: 11.25rem;
+$medium-width: 60rem;
+
+
+html, body {
+    font-family: "Roboto", sans-serif;
+}
+
+.intro h1, .navbar li, #articles h2 {
+        text-transform: uppercase;    
+}
+
+.intro {
+    h1 {
+        font-family: "Roboto Slab", serif;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(255,0,0,0.5);
+    height: $nav-height;
+}
+
+.navbar__option {
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.348em;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.navbar__logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.415em;
+    font-weight: 300;
+}
+
+@keyframes hide_navbar {
+    from {
+        left: 0;
+    }
+    75% {
+        left: -99%;
+    }
+    to {
+        left: -90%;
+    }
+}
+
+@keyframes show_navbar {
+    from {
+        left: -90%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.nav_collapsed {
+    left: -90%;
+    animation: hide_navbar cubic-bezier(.73,.01,.04,1) 0.35s ;
+}
+
+.nav_expanded {
+    left: 0;
+    animation: show_navbar cubic-bezier(.73,.01,.04,1) 0.25s;
+}
+.nav_collapsed #widget_show {
+    display: block;
+}
+
+.nav_collapsed #widget_hide {
+    display: none;
+}
+
+.navbar__links, footer ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__links {
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.nav__widget {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+}
+
+.motto {
+    margin-top: $nav-height;
+}
+
+.motto p {
+    text-align: right;
+}
+
+footer ul {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+footer .copyright {
+    margin-left: auto;
+}
+
+#portfolio div {
+    max-width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+.intro, .article, #motto {
+    text-align: center;
+}
+
+.nav__widget {
+    cursor: pointer;
+}
+
+.nav__widget_hidden {
+    display: none;
+}
+
+@media (min-width: $medium-width) {
+    .navbar {
+        height: $nav-height-full;
+    }
+    .navbar__links {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 2rem;
+        margin-top: 4.2rem;
+    }
+    .nav_collapsed {
+        left: 0;
+    }
+    .navbar .nav__widget {
+        display: none;
+    }
+    .motto {
+        margin-top: $nav-height-full;
+    }
+}
