@@ -1,14 +1,49 @@
-html, body {
+html {
   font-family: "Roboto", sans-serif; }
 
-.intro h1, .navbar li, #articles h2 {
+body {
+  background-color: #efeee9;
+  max-width: 1810px;
+  margin: auto; }
+
+.full_width {
+  width: 100%;
+  box-sizing: border-box; }
+
+header {
+  background: url("../img/ryyr-k3ysqg-damian-zaleski.png") -44px -16px no-repeat; }
+
+.intro h1, .navbar li, #articles h2, .intro a {
   text-transform: uppercase; }
 
-.intro h1 {
-  font-family: "Roboto Slab", serif; }
+a:focus {
+  background: orange;
+  font-size: 150%; }
 
-img {
-  max-width: 100%; }
+.intro {
+  font-size: 1.25rem;
+  font-weight: 300;
+  background-color: #fff;
+  padding: 2.1rem 1rem;
+  text-align: center; }
+  .intro h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 100;
+    padding: 1rem 0; }
+  .intro p {
+    text-align: left;
+    max-width: 32em;
+    margin: 0 auto;
+    line-height: 1.35em; }
+  .intro a {
+    display: inline-block;
+    margin: 4.1rem auto 4.8rem;
+    text-decoration: none;
+    border: 2px solid;
+    color: inherit;
+    font-weight: 600;
+    padding: 1rem 2.3rem;
+    font-size: 1.125rem; }
 
 .navbar {
   width: 100%;
@@ -16,7 +51,7 @@ img {
   top: 0;
   left: 0;
   z-index: 10;
-  background: rgba(255, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   height: 7.5rem; }
 
 .navbar__option {
@@ -72,11 +107,77 @@ img {
   top: 0rem;
   right: 1rem; }
 
+.nav__widget {
+  cursor: pointer; }
+
+.nav__widget_hidden {
+  display: none; }
+
 .motto {
-  margin-top: 7.5rem; }
+  padding-top: 7.5rem;
+  font-size: 1.48rem;
+  font-weight: 300;
+  text-align: right; }
 
 .motto p {
-  text-align: right; }
+  padding-top: 20rem;
+  display: inline-block;
+  text-align: right;
+  max-width: 24em; }
+
+.intro h1, .article, #motto {
+  text-align: center; }
+
+.showcase {
+  display: flex;
+  flex-flow: column nowrap; }
+
+.showcase__tile {
+  max-height: 418px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #000; }
+  .showcase__tile img {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transition: all 0.2s linear; }
+  .showcase__tile .showcase__details {
+    display: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .showcase__tile:hover img {
+    opacity: 0.4;
+    transition: all 0.4s ease-out; }
+  .showcase__tile:hover .showcase__details {
+    display: block; }
+
+.showcase {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto; }
+
+.showcase_tile {
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  max-height: 418px;
+  overflow: hidden; }
+  .showcase_tile img {
+    width: 100%;
+    max-height: 100%; }
+
+#about img {
+  max-width: 100%; }
 
 footer ul {
   flex-flow: row nowrap;
@@ -85,28 +186,18 @@ footer ul {
 footer .copyright {
   margin-left: auto; }
 
-#portfolio div {
-  max-width: 100%; }
-  #portfolio div img {
-    width: 100%; }
+@media (min-width: 45rem) {
+  .limited_width {
+    max-width: 1108px;
+    margin: 0 auto; }
 
-.intro, .article, #motto {
-  text-align: center; }
-
-.nav__widget {
-  cursor: pointer; }
-
-.nav__widget_hidden {
-  display: none; }
-
-@media (min-width: 60rem) {
   .navbar {
     height: 11.25rem; }
 
   .navbar__links {
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 2rem;
     margin-top: 4.2rem; }
 
@@ -117,6 +208,26 @@ footer .copyright {
     display: none; }
 
   .motto {
-    margin-top: 11.25rem; } }
+    padding-top: 11.25rem; }
+    .motto p {
+      padding-top: 32rem; }
+
+  .showcase {
+    flex-flow: row wrap;
+    align-content: stretch;
+    justify-content: center;
+    width: 100%; }
+
+  .showcase__tile {
+    flex: 0 1 559px;
+    margin: 0;
+    padding: 0;
+    height: 418px;
+    overflow: hidden; }
+    .showcase__tile img {
+      width: auto;
+      min-width: 100%;
+      max-width: none;
+      height: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

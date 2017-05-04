@@ -10,49 +10,55 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul class="navbar__links">
+        <ul class="navbar__links limited_width">
             <li class="navbar__option"><a href="#portfolio">Portfolio</a></li>
             <li class="navbar__option"><a href="#about">About</a></li>
-            <li class="navbar__option navbar__logo"><a href="#header">Moonspeak</a></li>
+            <li class="navbar__option navbar__logo"><a href="#beginning">Moonspeak</a></li>
             <li class="navbar__option"><a href="#articles">Articles</a></li>
             <li class="navbar__option"><a href="#contact">Contact</a></li>
         </ul>
         <div id = "widget_show" class="nav__widget nav__widget_hidden"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
         <div id = "widget_hide" class="nav__widget nav__widget_hidden">X</div>
     </nav>   
-    <header class="motto">
+    <span id="beginning"></span>
+    <header class="motto limited_width">
         <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidunt ut labore</p></div>
     </header>
-    <span id="beginning"></span>
-    <main>
-        <div class="intro">
+    <main class="full_width">
+        <div class="intro limited_width">
             <h1>Aarhus Lejerboliger</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deserunt, nesciunt. Ullam aliquid fugit sit assumenda molestias iste fugiat ipsam dolorum accusantium architecto? Officia cum soluta quasi harum quis, tempora ex ab, natus, quo nostrum sint eum quisquam! Laborum, atque consequuntur nesciunt, neque odit quas perspiciatis? Aperiam, illum eius! Eligendi, perspiciatis?
             </p>
             <a href="#">View project</a>
         </div>
-        <div id="portfolio">
-            <div>
+        <div id="portfolio" class="showcase">
+            <div class="showcase__tile">
                 <img src="img/1.png" alt="Digital SLR camera" />
+                <div class="showcase__details">Lorem ipsum</div>
             </div>
-            <div>
+            <div class="showcase__tile">
                 <img src="img/2.png" alt="Woman holding a book titled Kinfolk" />
+                <div class="showcase__details">Lorem ipsum</div>
             </div>
-            <div>
+            <div class="showcase__tile">
                 <img src="img/3.png" alt="Violin player" />
+                <div class="showcase__details">Lorem ipsum</div>
             </div>
-            <div>
+            <div class="showcase__tile">
                 <img src="img/4.png" alt="Smartwatch" />
+                <div class="showcase__details">Lorem ipsum</div>
             </div>
-            <div>
+            <div class="showcase__tile">
                 <img src="img/5.png" alt="Woman using a laptop" />
+                <div class="showcase__details">Lorem ipsum</div>
             </div>
-            <div>
+            <div class="showcase__tile">
                 <img src="img/6.png" alt="iMac computer" />
+                <div class="showcase__details">Lorem ipsum</div>
             </div>
         </div>
-        <div id="motto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum facilis, placeat ex eaque aliquid doloribus porro, fuga itaque quasi.</div>
-        <div  id="about">
+        <div class="limited_width">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eum facilis, placeat ex eaque aliquid doloribus porro, fuga itaque quasi.</div>
+        <div id="about">
             <div>
                 <img src="img/close-up-of-blue-buttons.png" alt="blue buttons">
             </div>    
@@ -71,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div  id="articles">
+        <div id="articles" class="limited_width">
             <div class="article">
                 <h2>Excepteur sint occaecat cupidatat non proident.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor harum veniam ipsa corporis quos voluptas et temporibus at! Placeat repellendus culpa atque similique doloremque quasi quo nulla animi fuga, nostrum earum aut dolore, temporibus ipsum esse fugiat adipisci perferendis nemo recusandae facilis architecto alias error? Placeat dicta laboriosam excepturi praesentium mollitia, cupiditate.</p>
@@ -88,9 +94,8 @@
                 <a href="#">Learn more</a>
             </div>
         </div>
-    </main>
-            
-    <div id="contact">
+    </main>       
+    <div id="contact" class="limited_width">
         <div>
             <div>
             <p>There are many variations of passages of Lorem Ipsum available,
