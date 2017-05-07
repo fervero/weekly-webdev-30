@@ -1,8 +1,9 @@
 html {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  color: #232323;
+  background-color: #efeee9; }
 
 body {
-  background-color: #efeee9;
   max-width: 1810px;
   margin: auto; }
 
@@ -17,8 +18,7 @@ header {
   text-transform: uppercase; }
 
 a:focus {
-  background: orange;
-  font-size: 150%; }
+  background: rgba(255, 165, 0, 0.7); }
 
 .intro {
   margin: 3rem auto;
@@ -185,8 +185,31 @@ a:focus {
   max-width: 21em;
   margin: 3rem auto; }
 
-#about img {
+.example {
+  background-color: #fff;
+  color: #250d59; }
+
+.example__picture {
   max-width: 100%; }
+  .example__picture img {
+    max-width: 100%; }
+
+.bulletpoint {
+  font-size: 0.9rem;
+  padding: 1rem;
+  font-weight: 300; }
+
+.bulletpoint__header {
+  text-transform: uppercase;
+  letter-spacing: .38em;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: inherit; }
+
+.bulletpoint__body {
+  line-height: 1.57em;
+  max-width: 23em;
+  margin-top: 0.18rem; }
 
 footer ul {
   flex-flow: row nowrap;
@@ -247,6 +270,24 @@ footer .copyright {
       height: 100%; }
 
   .big_text {
-    margin: 13.3rem auto 13rem; } }
+    margin: 13.3rem auto 13rem; }
+
+  .example {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around; }
+
+  .example__bulletpoints {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex: 0 0 30rem;
+    margin-left: 8rem; }
+
+  .example__picture {
+    flex: 1 0 458px;
+    max-width: 840px;
+    align-self: center; } }
 
 /*# sourceMappingURL=style.css.map */
