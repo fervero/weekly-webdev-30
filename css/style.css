@@ -14,7 +14,7 @@ body {
 header {
   background: url("../img/ryyr-k3ysqg-damian-zaleski.png") -44px -16px no-repeat; }
 
-.intro h1, .navbar li, #articles h2, .intro a {
+.intro h1, .navbar li, .intro a {
   text-transform: uppercase; }
 
 a:focus {
@@ -190,9 +190,10 @@ a:focus {
   color: #250d59; }
 
 .example__picture {
-  max-width: 100%; }
+  max-width: 100%;
+  overflow: hidden; }
   .example__picture img {
-    max-width: 100%; }
+    width: 100%; }
 
 .bulletpoint {
   font-size: 0.9rem;
@@ -210,6 +211,31 @@ a:focus {
   line-height: 1.57em;
   max-width: 23em;
   margin-top: 0.18rem; }
+
+.articles {
+  padding-top: 6rem;
+  padding-bottom: 5rem; }
+
+.article {
+  background-color: #fff;
+  padding: 2.5em;
+  position: relative; }
+
+.article__header {
+  font-size: 1.125rem;
+  margin-bottom: 2em; }
+
+.article__body {
+  font-weight: 300; }
+
+.article__link {
+  color: #4faefe;
+  font-weight: 300;
+  padding-top: 0.5rem;
+  position: absolute;
+  bottom: 2.15rem;
+  left: 50%;
+  transform: translateX(-50%); }
 
 footer ul {
   flex-flow: row nowrap;
@@ -279,6 +305,7 @@ footer .copyright {
     justify-content: space-around; }
 
   .example__bulletpoints {
+    flex-shrink: 0;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -286,8 +313,25 @@ footer .copyright {
     margin-left: 8rem; }
 
   .example__picture {
-    flex: 1 0 458px;
+    flex: 1 0 480px;
+    max-height: 720px;
     max-width: 840px;
-    align-self: center; } }
+    align-self: center; }
+    .example__picture img {
+      width: 145%;
+      max-height: 100%;
+      margin-left: -6%; }
+
+  .articles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+
+  .article {
+    flex: 1;
+    padding: 1.5rem 2.5rem 5rem;
+    margin-right: 2rem; }
+    .article:last-of-type {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
