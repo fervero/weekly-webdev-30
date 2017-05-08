@@ -11,6 +11,13 @@ body {
   width: 100%;
   box-sizing: border-box; }
 
+.limited_width {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1108px;
+  margin-left: auto;
+  margin-right: auto; }
+
 header {
   background: url("../img/ryyr-k3ysqg-damian-zaleski.png") -44px -16px no-repeat; }
 
@@ -18,14 +25,15 @@ header {
   text-transform: uppercase; }
 
 a:focus {
-  background: rgba(255, 165, 0, 0.7); }
+  background: rgba(255, 165, 0, 0.3); }
 
 .intro {
   margin: 3rem auto;
   font-size: 1.25rem;
   font-weight: 300;
   background-color: #fff;
-  padding: 2.1rem 1rem;
+  padding-top: 2.1rem;
+  padding-bottom: 2.1rem;
   text-align: center; }
   .intro h1 {
     font-family: "Roboto Slab", serif;
@@ -94,7 +102,7 @@ a:focus {
 .nav_collapsed #widget_hide {
   display: none; }
 
-.navbar__links, footer ul {
+.navbar__links {
   display: flex;
   list-style: none;
   padding: 0; }
@@ -231,26 +239,58 @@ a:focus {
 .article__link {
   color: #4faefe;
   font-weight: 300;
-  padding-top: 0.5rem;
+  margin-top: 0.5rem;
   position: absolute;
   bottom: 2.15rem;
   left: 50%;
   transform: translateX(-50%); }
 
-footer ul {
-  flex-flow: row nowrap;
-  justify-content: flex-start; }
+.address {
+  background-color: #353535;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
-footer .copyright {
-  margin-left: auto; }
+.address, .address__email {
+  color: #fff;
+  text-decoration: none; }
+
+.address__text {
+  font-style: normal;
+  font-weight: 300;
+  max-width: 39rem;
+  line-height: 148%; }
+
+.address__header {
+  font-size: inherit; }
+
+.address__map {
+  width: 100%;
+  height: 25rem; }
+
+.footer {
+  padding-top: 1.4rem;
+  color: #353535;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  font-size: 1.5rem; }
+  .footer a {
+    color: inherit; }
+
+.footer__item {
+  padding-right: 0.5rem; }
+  .footer__item:last-of-type {
+    margin-left: auto;
+    padding-right: 0; }
+
+.copyright {
+  font-weight: 300;
+  font-size: 1.25rem; }
 
 @media (min-width: 45rem) {
-  .limited_width {
-    max-width: 1108px;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto; }
-
   .navbar {
     height: 11.25rem; }
 
@@ -332,6 +372,21 @@ footer .copyright {
     padding: 1.5rem 2.5rem 5rem;
     margin-right: 2rem; }
     .article:last-of-type {
-      margin-right: 0; } }
+      margin-right: 0; }
+
+  .address > div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
+
+  .address__text {
+    padding-right: 10rem; }
+
+  .footer__item {
+    padding-right: 1.75rem; } }
+@media (min-width: 1148px) {
+  .limited_width {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
